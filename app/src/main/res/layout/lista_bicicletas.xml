@@ -27,6 +27,9 @@
             android:hint="nombre de la bicicleta"
             android:textSize="20sp"
             android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/Marca"
@@ -48,4 +51,16 @@
             android:layout_toRightOf="@id/Imagen"
             android:hint="precio"
             android:textSize="20sp" />
+    <TextView
+        android:id="@+id/año"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/precio"
+        android:layout_toRightOf="@id/Imagen"
+        android:layout_toEndOf="@id/Imagen"
+        android:hint="año"
+        android:textSize="20sp"
+        />
+
+
     </RelativeLayout>

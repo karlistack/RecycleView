@@ -33,14 +33,14 @@ import com.squareup.picasso.Picasso
         val marca = view.findViewById(R.id.Marca) as TextView
         val precio = view.findViewById(R.id.precio) as TextView
         val imagen = view.findViewById(R.id.Imagen) as ImageView
-        val año =  view.findViewById(R.id.precio) as TextView
+        val año =  view.findViewById(R.id.año) as TextView
         fun bind(bicicleta: Bicicleta, context: Context){
             nombre.text = bicicleta.modelo
             marca.text = bicicleta.empresa
             año.text = bicicleta.año.toString()
             precio.text = bicicleta.precio.toString()
             imagen.loadUrl(bicicleta.imagen)
-            itemView.setOnClickListener(View.OnClickListener { Toast.makeText(context, bicicleta.modelo, Toast.LENGTH_SHORT).show() })
+            itemView.setOnClickListener { Toast.makeText(context, bicicleta.modelo, Toast.LENGTH_SHORT).show() }
         }
         fun ImageView.loadUrl(url: String) {
             Picasso.with(context).load(url).into(this)
